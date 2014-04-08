@@ -7,13 +7,29 @@
   <style>
   @font-face {
     font-family: test;
-    src: url('Test.woff') format('WOFF');
+    src: url('tester.woff') format('WOFF');
   }
-  h2 { font-family: test; }
+  h2 {
+    font-family: test;
+    -webkit-font-feature-settings: 'liga';
+		-moz-font-feature-settings: 'liga=1';
+		-moz-font-feature-settings: 'liga';
+		-ms-font-feature-settings: 'liga' 1;
+		-o-font-feature-settings: 'liga';
+		font-feature-settings: 'liga';
+  }
+  input {
+    width: 90%;
+  }
   </style>
 </head>
 <body>
-  <h2>Okay, so this is a quick and dirty prototype, made using FontCreator 7.5</h2>
-  <p>That's plain text, by the way. Not an image.</p>
+  <p>Font preview - you type text, the webpage styles it for you. Using webfont with-ligature-CSS technology.</p>
+  <p>Preview: <input type="text"
+         value="Okay all, this is a quick and dirty prototype made using FontCreator 7.5"
+         onkeyup="document.querySelector('h2').innerHTML = this.value"
+         onchange="document.querySelector('h2').innerHTML = this.value"></p>
+  <h2>Okay all, this is a quick and dirty prototype made using FontCreator 7.5</h2>
+
 </body>
 </html>
