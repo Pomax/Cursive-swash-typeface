@@ -3,11 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>A cursive, swashed, typeface. Or a prototype thereof, atm.</title>
+  <script>
+    // no, really
+		style = [
+			"<style>",
+			"@font-face {",
+			"  font-family: test;",
+			"  src: url('Tester.woff?t=" + Date.now() + "') format('WOFF');",
+			"}",
+			"</style>"
+		].join("\n");
+		document.write(style);
+  </script>
   <style>
-  @font-face {
-    font-family: test;
-    src: url('Tester.woff') format('WOFF');
-  }
   h2 {
     font-family: test;
     -webkit-font-feature-settings: 'liga';
@@ -25,10 +33,10 @@
 <body>
   <p>Font preview - you type text, the webpage styles it for you. Using webfont with-ligature-CSS technology.</p>
   <p>Preview: <input type="text"
-         value="Okay all, this is a (no longer so) quick and dirty prototype made using FontCreator 7.5"
+         value="Wiggle that butt, mississippi"
          onkeyup="document.querySelector('h2').innerHTML = this.value"
          onchange="document.querySelector('h2').innerHTML = this.value"></p>
-  <h2>Okay all, this is a (no longer so) quick and dirty prototype made using FontCreator 7.5</h2>
+  <h2>Wiggle that butt, mississippco</h2>
 
 </body>
 </html>
