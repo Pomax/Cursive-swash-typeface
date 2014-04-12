@@ -1,0 +1,40 @@
+
+lookup caltContextualAlt {
+  lookupflag 0;
+    @classL=[\space \parenleft \hyphen \bracketleft \braceleft \uni00AD \uni2010 \uni2011 \figuredash \endash \emdash \t \d \f \h \k \l \b ] ;
+
+    @classR=[\space \parenright \hyphen \bracketright \braceright \uni00AD \uni2010 \uni2011 \figuredash \endash \emdash \t \d \f \h \k \l \b ] ;
+
+    @classEvL=[\a \c \e \g \i \j \m \n \o \p \q \r \s \u \v \w \x \y \z \o \aogonek \eogonek ] ;
+
+	sub @classL @classEvL @classEvL t' @classEvL @classEvL @classEvL @classR by t3_4;
+	sub @classL @classEvL @classEvL t' @classEvL @classEvL @classR by t3_3;	
+	sub @classL @classEvL @classEvL t' @classEvL @classR by t3_2;
+	sub @classL @classEvL @classEvL @classEvL t' @classEvL @classR by t4_2;
+	sub @classL @classEvL t' @classEvL @classR by t2_2;
+	
+	
+	sub @classL @classEvL @classEvL @classEvL @classEvL @classEvL t' by x6t;	
+	sub @classL @classEvL @classEvL @classEvL @classEvL t' by x5t;
+	sub @classL @classEvL @classEvL @classEvL t' by x4t;	
+	sub @classL @classEvL @classEvL  t' by x3t;
+	sub @classL @classEvL t' by x2t;
+
+	sub t' @classEvL @classEvL @classEvL @classEvL @classEvL @classR by t6;	
+	sub t' @classEvL @classEvL @classEvL @classEvL @classR by t5;
+	sub t' @classEvL @classEvL @classEvL @classR by t4;
+	sub t' @classEvL @classEvL @classR by t3;
+	sub t' @classEvL @classR by t2;
+
+	
+} caltContextualAlt;
+
+feature calt {
+  script DFLT;
+     language dflt ;
+      lookup caltContextualAlt;
+  script latn;
+     language dflt ;
+      lookup caltContextualAlt;
+
+} calt;
