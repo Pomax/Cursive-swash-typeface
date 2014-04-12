@@ -4,4 +4,6 @@ We'll see how it goes; it'll require mad ligature substitution, as well as conte
 
 I'll be scanning in sheets to get most of the face properties documented, and will be writing a up design doc for it.
 
+"live view" with WOFF: https://pomax.github.com/Cursive-swash-typeface
+
 - Pomax
